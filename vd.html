@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Các ví dụ</title>
+</head>
+<body>
+    <!-- vidu1 -->
+    <form autocomplete="off">
+        <label for="email">Nhập địa chỉ email:</label>
+        <input type="text" name="email" placeholder="email@example.com" autofocus required/>
+        <input type="text" list="colors">
+        <datalist id="colors">
+            <option value="Red"></option>
+            <option value="Green"></option>
+            <option value="Yellow"></option>
+        </datalist>
+        <input type="submit" value="Submit">
+    </form> 
+    <!-- vidu2 -->
+    <article>
+        <header>
+        <h1>Thông tin về ĐHV</h1>
+        <p>Chức năng:</p>
+        </header>
+        <p>Trường Đại học Vinh là trường đại học trọng điểm quốc gia...</p>
+    </article>
+    <!-- vidu3 -->
+    <nav>
+        <ul>
+        <li><a href="http://vinhuni.edu.vn/">Trang chủ</a></li>
+        <li><a href="http://student.vinhuni.edu.vn/cmcsoft.iu.web.info/">Giới thiệu</a></li>
+        <li><a href="https://www.facebook.com/huyson.2410/">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <!-- vidu4 -->
+    <section>
+        <h1>LTW</h1>
+        <p>Học phần Lập trình WEB</p>
+    </section>
+    <aside>
+        <p>Quảng cáo</p>
+        <p>Tin tức ngoài lề</p>
+    </aside>
+    <!-- vidu5 -->
+    <article>
+        <h1>Tin tức trong ngày</h1>
+        <p>Nội dung tin tức</p>
+    </article>
+    <footer>
+        <p>Email: test.vinhuni@gmail.com</p>
+        <p>SĐT: 0123 456 789</p>
+        <p>Địa chỉ: 182 Lê Duẩn</p>
+    </footer>
+    <figure>
+        <img style="width:350px; height: 250px;" src="image/anh-dep-1.jpg">
+        <figcaption>Hình ảnh đẹp<figcaption>
+    </figure>
+    <!--  vidu6   -->
+    <video poster="image/anh-dep-1.jpg" controls>
+        <source src="image/Top 9 Video Intro Mở Đầu Youtube Đẹp Nhất Thế Giới.mp4">
+    </video>
+    <audio controls>
+        <source src="audio/Em-Gi-Oi-Jack-K-ICM.mp3" type="audio/mp3">
+    </audio>
+    <iframe width="1200" height="600" src="https://www.youtube.com/embed/FN7ALfpGxiI" frameborder="0" allow="accelerometer; autoplay; encryptedmedia; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe> <br>
+    <!--  vidu7  --> 
+    <progress value="40" max="100" style="height: 40px;margin-top: 35px;"></progress>
+    <meter value="0.7">70%</meter>
+    <details style="margin-top: 25px;">
+        <summary>VinhUni:</summary>
+        <p style="color: #000;">Vinh University</p>
+    </details>
+    <p>Html is very <mark>simple</mark> to use and it is also <mark>easy</mark> to learn.</p>
+    <dialog open="">This is an open dialog window</dialog> <br>
+    <!-- vidu8 -->
+    <!-- Vẽ hình chữ nhật -->
+    <canvas id="myCanvas" width="300" height="400" style="border: 2px solid red;"></canvas>
+    <!-- Vẽ đường thẳng -->
+    <canvas id="line"></canvas>
+    <script>
+        var c=document.getElementById("line");
+        var ct = c.getContext("2d");//Vẽ hình 2D
+            ct.moveTo(50, 50);//Điểm bắt đầu
+            ct.lineTo(200, 100);//Điểm kết thúc
+            ct.lineTo(200, 300);//Điểm kết thúc
+            ct.lineWidth = 10;
+            ct.strokeStyle = "blue";
+            ct.stroke();//Vẽ
+    </script> <br>
+    <!-- vidu9 -->
+    <!-- Vẽ hình tròn -->
+    <!--arc(x, y, r, rc1, rc2) để vẽ cung tròn, x, y là tọa độ tâm; r là bán kín
+    h, rc1 và rc2 là vẽ cung tròn từ độ dài chu vi rc1 đến rc2-->
+    <canvas id="circle"></canvas>
+    <script>
+        var c = document.getElementById("circle");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 100, 80, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script> <br>
+    <!-- Vẽ text -->
+    <canvas id="text"></canvas>
+    <script>
+        var c = document.getElementById("text");
+        var ct = c.getContext("2d");
+            ct.font = "30px Arial";//Định dạng font chữ
+            ct.fillText("Xin chao", 30, 90);//Vẽ text không viền
+            ct.strokeText("Xin chao", 50, 50);//Vẽ text có viền
+    </script>
+    <!-- vidu10 -->
+    <!-- Vẽ hình chữ nhật gradient -->
+    <canvas id="myCanvas"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createLinearGradient(0, 100, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "white");
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+    </script> <br>
+    <!-- Dịch chuyển tọa độ -->
+    <canvas id="coordinate" width="800"></canvas>
+    <script>
+        var ctx = document.getElementById('coordinate').getContext('2d');
+            ctx.font = '48px serif'; ctx.fillStyle = 'red';
+            ctx.fillText('Hello world', 20, 50);
+            ctx.translate(300, 100);
+            ctx.rotate(-Math.PI/4); ctx.scale(0.5, 0.5);
+            ctx.fillText('Hello world', 0, 0);
+    </script> <br>
+    <!-- vidu11 -->
+    <!-- Vẽ hình tròn -->
+    <svg width="250" height="250">
+        <circle cx="100" cy="100" r="90" stroke="blue" strokewidth="3" fill="red" />
+    </svg>
+    <!-- Vẽ hình chữ nhật -->
+    <svg width="400" height="200">
+        <rect width="400" height="200" style="fill:pink;strokewidth:15;stroke:blue" />
+    </svg>
+    <!-- Vẽ đường thẳng -->
+    <svg width="220" height="60">
+        <line x1="30" y1="10" x2="200" y2="50" style="stroke: green; strokelinecap:round; stroke-width:20;" />
+    </svg>
+    <!-- Vẽ đường gấp khúc -->
+    <svg width="130" height="160">
+        <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" fill="#F9F38C" stroke="green" stroke-width="5" />
+    </svg>
+    <!-- Vẽ ngôi sao -->
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:violet;stroke:brown;stroke-width:5;fillrule:evenodd;" />
+    </svg>
+    <!-- Vẽ logo -->
+    <svg height="500" width="500">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:red;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:blue;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="100" rx="175" ry="70" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" fontfamily="Verdana" x="100" y="116">Vinh Uni</text>
+    </svg>
+    <!-- Vẽ ảnh động -->
+    <svg width="1000" height="30">
+        <rect width="20" height="20" fill="orange">
+            <animate attributeName="x" from="50" to="1000" dur="3s" fill="freeze" repeatCount="indefinite" />
+        </rect>
+        <circle cx="0" cy="15" r="5" fill="green" stroke="yellow">
+            <animate attributeName="cx" from="50" to="1000" dur="5s" fill="freeze" repeatCount="indefinite" />
+        </circle>
+    </svg> <br>
+    <div style="text-align: center;">
+        <div style="display: inline-block;" class="rounded-corners"></div> <br>
+        <input style="display: inline-block;" id="input" type="button" value="Đồng ý"> <br>
+        <div style="display: inline-block;" id="rcorners1"></div> <br>
+        <div style="display: inline-block;" id="rcorners2"></div> <br>
+        <div style="display: inline-block;" id="rcorners3"></div> <br>
+        <div style="display: inline-block;" id="rcorners4"></div> <br>
+        <div style="display: inline-block;" id="rcorners5"></div> <br>
+        <div style="display: inline-block;" id="rcorners6"></div> <br>
+        <div style="display: inline-block;" id="borderimg1"></div> <br>
+        <div style="display: inline-block;" id="borderimg2"></div> <br>
+        <div style="display: inline-block;" id="borderimg3"></div> <br>
+        <div style="display: inline-block;" id="div"></div> <br>
+        <div style="display: inline-block;" id="multibackground"></div> <br>
+        <div style="display: inline-block;" class="div0"></div><br>
+        <div style="display: inline-block;" class="div0" id="div1"></div><br>
+        <div style="display: inline-block;" class="div0" id="div2"></div><br>
+        <div style="display: inline-block;" class="div0" id="div3"></div><br>
+        <div style="display: inline-block;" class="div4"></div><br>
+        <div style="display: inline-block;" class="div4" id="div5"></div><br>
+        <div style="display: inline-block;" class="div4" id="div6"></div><br>
+        <div style="display: inline-block;" class="div4" id="div7"></div><br>
+        <div style="display: inline-block;"><p id="heading1"><b>heading1</b></p></div> <br>
+        <div style="display: inline-block;"><p id="heading2"><b>heading2</b></p></div><br>
+        <div style="display: inline-block;"><p id="heading3"><b>heading3</b></p></div><br>
+        <div style="display: inline-block;"><p id="heading4"><b>heading4</b></p></div><br>
+        <div style="display: inline-block;"><p class="box" id="box1">Box1</p></div><br>
+        <div style="display: inline-block;"><p class="box" id="box2">Box2</p></div><br>
+        <div style="display: inline-block;"><p class="box" id="box3">Box3</p></div><br>
+        <div style="display: inline-block;"><p class="box" id="box4">Box4</p></div><br>
+        <div style="display: inline-block;"><p class="box" id="box5">Box5</p></div><br>
+    </div>
+</body>
+</html>

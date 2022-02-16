@@ -1,0 +1,122 @@
+
+.bai1 {
+    background-color: royalblue;
+    margin-bottom: 500px;
+    height: 130px;
+    width: 900px;
+    background-color:dodgerblue;
+    margin-left: 300px;
+    margin-bottom: 50px;       
+}
+.bai1 img {
+    float:left;
+    padding-left: 50px;
+    width:90px;
+    height:90px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-left: 150px;
+}
+.bai1 p{
+    padding-top: 20px;
+}
+
+.bai1,.bai2, .bai3, .bai4 {
+    text-align: center;
+}
+.bai2{
+    margin-bottom: 50px;
+}
+.bai2 button{
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.bai3 {
+    height: 200px;
+    background-color: aqua;
+    background-image: url('image/anh2.jpg');
+    width: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 35px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+.bai3 button {
+    width: 160px; 
+    height: 40px;
+    background-color:firebrick;
+    color: white;
+    border-color: red;
+    border-radius: 5px;
+}
+.lammo {
+        opacity: 0.9;
+}
+.bai3 p{
+    color: white;
+    opacity: 0.9;
+    padding-bottom: 15px;
+}
+    
+.bai4{
+    width:900px ;
+    height: 280px;
+    margin-left: 300px;
+    margin-bottom: 70px;
+    background-color: #efeeee;
+    padding-top: 20px;
+}
+.bai4 .circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border:1px solid darkcyan;
+    margin: auto;
+}
+.bai4 input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+.bai4 button{
+    background-color: darkcyan;
+    color: white;
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+    opacity: 0.8;
+    border: none;
+}
+.bai5{
+    width: 900px;
+    height:380px;
+    display: flex;
+    margin-left: 268px;
+    padding-top: 20px;
+}
+.bai5 img{
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 280px;
+    height: 300px;    
+}
+.bai5 .content{
+    float:right;
+    width: 400px;
+    padding-left: 20px;
+}
+.bai5 button{
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+}

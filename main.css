@@ -1,0 +1,172 @@
+/* Border-Radius: bo góc tròn đường viền */
+.rounded-corners {
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    border: solid 5px blue;
+    background: #999;
+    border-radius: 50%;
+}
+#input {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    background: #8AC007;
+    color: #fff;
+    cursor: pointer;
+}
+#rcorners1 {
+    border-radius: 15px 50px 30px 5px;
+    background: #12b952;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+#rcorners2 {
+    border-radius: 15px 50px 30px;
+    background: #9ace0c;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+#rcorners3 {
+    border-radius: 15px 50px;
+    background: #44093c;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+#rcorners4 {
+    border-radius: 25px;
+    background: rgb(225, 240, 89);
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#rcorners5 {
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#rcorners6 {
+    border-radius: 25px;
+    background: url('image/anh-dep-1.jpg');
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+/* Border Image: tạo đường viền bằng hình ảnh    */
+#borderimg1 {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('image/anh-dep-1.jpg') 30 round;
+    border-image-width: 10px;
+    width: 108px;
+    height: 108px;
+}
+#borderimg2 {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('image/anh-dep-1.jpg') 30 round;
+    border-image-width: 20px;
+    width: 108px;
+    height: 108px;
+}
+#borderimg3 {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url('image/anh-dep-1.jpg') 30 round;
+    border-image-width: 30px;
+    width: 108px;
+    height: 108px;
+}
+#div {
+    width: 108px;
+    height: 108px;
+    border-style: solid;
+    border-width: 27px;
+    border-image: url('image/anh-dep-1.jpg') 27 stretch; (round, repeat)
+}
+/* Multi Background: xử lý nâng cao background  */  
+#multibackground {
+    background-image: url('image/anh-dep-1.jpg'), url('image/anh1.jpg');
+    background-position: left top, left top;
+    background-repeat: no-repeat, no-repeat;
+    width: 400px; height: 400px;
+    /* background-size:contain;
+   Co giãn theo chiều rộng và chiều cao theo đúng tỉ lệ của hình ảnh */
+    /* background-size:cover;
+   Nếu chiều rộng và chiều cao của thẻ HTML lớn hơn hình ảnh thì nó sẽ giãn
+   ra (full) */
+}
+.div0 {
+    width: 250px;
+    height: 100px;
+    margin: 20px auto;
+    border: solid 20px;
+    padding: 50px;
+    background: url('image/anh-dep-1.jpg')
+   no-repeat top left;
+    background-size: cover;
+}
+#div1 {
+    background-origin: border-box;
+}
+#div2 {
+    background-origin: padding-box;
+}
+#div3 {
+    background-origin: content-box;
+}
+.div4 {
+    width: 250px;
+    height: 100px;
+    margin: 20px auto;
+    border: dotted 10px blue;
+    padding: 50px;
+    background: yellow;
+}
+#div5 {
+    background-clip: border-box;
+}
+#div6 {
+    background-clip: padding-box;
+}
+#div7 {
+    background-clip: content-box;
+}
+/* Text-shadow: tạo hiệu ứng shadow dành cho đoạn text   */
+#heading1 {
+    text-shadow: 0px 0px 20px red;
+}
+#heading2 {
+    text-shadow: 29px 10px 2px blue;
+}
+#heading3 {
+    text-shadow: 1px -10px 2px yellow;
+}
+#heading4 {
+    text-shadow: 5px 5px 5px #500b0b;
+}
+/* Box-shadow: tạo hiệu ứng shadow dành cho thẻ HTML(đường viền) */
+.box {
+    width: 100px;
+}
+#box1 {
+    box-shadow: 0px 0px 30px 15px red;
+}
+#box2 {
+    box-shadow: 0px 0px 12px 10px red inset;
+}
+#box3 {
+    box-shadow: 5px 5px 12px 0px red;
+}
+#box4 {
+    box-shadow: 5px 5px 0px 0px red;
+}
+#box5 {
+    box-shadow: -5px -5px 5px 0px red;
+}
+   
